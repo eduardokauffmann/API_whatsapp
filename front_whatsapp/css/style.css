@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.img {
+    width: 80px;
+    height: 80px;
+}
+
+.display {
+    margin: 30px;
+}
+
+.label-custom {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    margin-top: 5px;
+}
+
+.group-input-custom {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    width: 25%;
+    height: 50px;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.group-btn-custom {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 25%;
+    margin: 5px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.input-custom {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.btn-custom {
+    width: 100%;
+    height: 50px;
+    color: white;
+    border: 1px solid #59A145;
+    border-radius: 10px;
+    background-color: #59A145;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.group {
+    margin: 10px;
+}
+
+.group a {
+    text-decoration: none;
+    color: black;
+}
+
+.enviadas {
+    width: 25%;
+    margin: 10px;
+}
+
+.enviadas p {
+    padding: 8px 12px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    background-color: #e8f5e9;
+}
+
+/* --- SELECT DE DDI (CSS puro) --- */
+.select-wrapper {
+    position: relative;
+    outline: none;
+    cursor: pointer;
+}
+
+.select-wrapper input[type="radio"] {
+    display: none;
+}
+
+.select-trigger {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding-right: 8px;
+    border-right: 1px solid #ddd;
+}
+
+.selected-option {
+    display: none;
+    align-items: center;
+    gap: 6px;
+    font-size: 18px;
+}
+
+.selected-option img,
+.option img {
+    width: 22px;
+    height: 15px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.select-wrapper:has(#br:checked) .br-selected {
+    display: flex;
+}
+
+.select-wrapper:has(#us:checked) .us-selected {
+    display: flex;
+}
+
+.chevron {
+    border: solid #666;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 2px;
+    transform: rotate(45deg);
+    transition: transform 0.2s;
+}
+
+.select-wrapper:focus-within .chevron {
+    transform: rotate(-135deg);
+}
+
+.select-options {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: -10px;
+    width: 150px;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: none;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.select-wrapper:focus-within .select-options {
+    display: block;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+
+.option:hover {
+    background-color: #f0f0f0;
+}
+
+.select-wrapper:has(#br:checked) .br-option,
+.select-wrapper:has(#us:checked) .us-option {
+    background-color: #e8f5e9;
+    font-weight: bold;
+}
+
+/* Celular: campos ocupam quase toda a largura */
+@media (max-width: 800px) {
+    .label-custom,
+    .group-input-custom,
+    .group-btn-custom,
+    .enviadas {
+        width: 90%;
+    }
+}

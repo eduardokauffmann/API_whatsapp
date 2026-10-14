@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Entrar - Uatizap</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <img class="img" src="img/phone-call.png" alt="Icone de chamada">
+        </div>
+        <div class="display">
+            <h1>Seu número para entrar</h1>
+        </div>
+        <div class="label-custom">
+            <label for="tel">Telefone</label>
+        </div>
+        <div class="group-input-custom">
+            <div class="select-wrapper" tabindex="0">
+                <input type="radio" name="ddi" id="br" value="+55" checked>
+                <input type="radio" name="ddi" id="us" value="+1">
+
+                <div class="select-trigger">
+                    <div class="selected-option br-selected">
+                        <img src="https://flagcdn.com/w40/br.png" alt="Brasil">
+                        <span>+55</span>
+                    </div>
+                    <div class="selected-option us-selected">
+                        <img src="https://flagcdn.com/w40/us.png" alt="EUA">
+                        <span>+1</span>
+                    </div>
+                    <span class="chevron"></span>
+                </div>
+
+                <div class="select-options">
+                    <label for="br" class="option br-option">
+                        <img src="https://flagcdn.com/w40/br.png" alt="Brasil">
+                        <span>+55 (BR)</span>
+                    </label>
+                    <label for="us" class="option us-option">
+                        <img src="https://flagcdn.com/w40/us.png" alt="EUA">
+                        <span>+1 (US)</span>
+                    </label>
+                </div>
+            </div>
+            <input class="input-custom" type="tel" id="tel" placeholder="18 999999999">
+        </div>
+        <div class="label-custom">
+            <label for="senha">Senha</label>
+        </div>
+        <div class="group-input-custom">
+            <input class="input-custom" type="password" id="senha" placeholder="Sua senha">
+        </div>
+
+        <div class="group-btn-custom">
+            <button class="btn-custom" type="button" onclick="realizarLogin()">Entrar</button>
+        </div>
+
+        <div class="group">
+            <a href="registrar.html">Criar conta</a>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

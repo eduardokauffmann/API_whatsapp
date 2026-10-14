@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Conversas - Uatizap</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="display">
+            <h1>Enviar mensagem</h1>
+        </div>
+        <div class="label-custom">
+            <label for="destinatario">Telefone do destino</label>
+        </div>
+        <div class="group-input-custom">
+            <input class="input-custom" type="text" id="destinatario" placeholder="5518999999999">
+        </div>
+        <div class="label-custom">
+            <label for="textoMensagem">Mensagem</label>
+        </div>
+        <div class="group-input-custom">
+            <input class="input-custom" type="text" id="textoMensagem" placeholder="Escreva sua mensagem...">
+        </div>
+
+        <div class="group-btn-custom">
+            <button class="btn-custom" type="button" onclick="enviarMensagem()">Enviar</button>
+        </div>
+
+        <div id="enviadas" class="enviadas"></div>
+
+        <div class="group">
+            <a href="index.html" onclick="localStorage.clear()">Sair</a>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
